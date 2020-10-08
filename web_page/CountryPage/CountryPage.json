@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.0",
-  "id" : "UserDirectoryPage",
-  "name" : "UserDirectoryPage",
-  "lastUpdate" : 1602173632542,
+  "id" : "CountryPage",
+  "name" : "CountryPage",
+  "lastUpdate" : 1602166330360,
   "rows" : [
     [
       {
@@ -31,10 +31,10 @@
             "value" : 12
           }
         },
-        "reference" : "899d84ad-fec2-48f8-a426-7ee5be656526",
+        "reference" : "ef2ebcf0-63b2-40f5-b625-fda1c7633c59",
         "hasValidationError" : false,
         "id" : "pbContainer",
-        "description" : "Auto generate ui for business object \"com.company.model.UserDirectory\"",
+        "description" : "Auto generate ui for business object \"com.company.model.Country\"",
         "rows" : [
           [
             {
@@ -42,24 +42,11 @@
               "dimension" : {
                 "xs" : 12
               },
-              "propertyValues" : {
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : ""
-                },
-                "hidden" : {
-                  "type" : "constant",
-                  "value" : false
-                },
-                "repeatedCollection" : {
-                  "type" : "variable",
-                  "value" : ""
-                }
-              },
-              "reference" : "550e5d5b-ebc8-43d8-95e8-2366556868a9",
+              "propertyValues" : { },
+              "reference" : "b7aa5be5-0da5-4265-9162-0eb6637eac54",
               "hasValidationError" : false,
               "id" : "pbContainer",
-              "description" : "\"com.company.model.UserDirectory\" object from \"userDirectory\" variable",
+              "description" : "\"com.company.model.Country\" object from \"country\" variable",
               "rows" : [
                 [
                   {
@@ -85,7 +72,7 @@
                       },
                       "text" : {
                         "type" : "interpolation",
-                        "value" : "UserDirectory"
+                        "value" : "Country"
                       },
                       "alignment" : {
                         "type" : "constant",
@@ -96,7 +83,7 @@
                         "value" : 12
                       }
                     },
-                    "reference" : "be94b65d-ad60-4a8f-9435-dcfca1feab51",
+                    "reference" : "ecc3f561-2adc-4f59-87ab-7a9046cbde76",
                     "hasValidationError" : false,
                     "id" : "pbTitle",
                     "description" : ""
@@ -122,7 +109,7 @@
                       },
                       "text" : {
                         "type" : "interpolation",
-                        "value" : "<span class=\"glyphicon glyphicon-plus\"></span> New UserDirectory"
+                        "value" : "<span class=\"glyphicon glyphicon-plus\"></span> New Country"
                       },
                       "type" : {
                         "type" : "constant",
@@ -168,7 +155,7 @@
                         "value" : "link"
                       }
                     },
-                    "reference" : "49ddb2fa-88d6-4e99-815c-1cc5e7c658ab",
+                    "reference" : "b930b382-3ae0-48af-908b-063bef320e77",
                     "hasValidationError" : false,
                     "id" : "pbLink"
                   }
@@ -187,7 +174,7 @@
                         "type" : "constant",
                         "value" : [
                           "Name",
-                          "Description"
+                          "Code"
                         ]
                       },
                       "allowHtml" : {
@@ -212,13 +199,13 @@
                       },
                       "selectedRow" : {
                         "type" : "variable",
-                        "value" : "userDirectory_selected"
+                        "value" : "country_selected"
                       },
                       "columnsKey" : {
                         "type" : "constant",
                         "value" : [
                           "name",
-                          "description"
+                          "code"
                         ]
                       },
                       "dimension" : {
@@ -227,22 +214,14 @@
                       },
                       "content" : {
                         "type" : "expression",
-                        "value" : "userDirectory"
+                        "value" : "country"
                       },
                       "zebraStriping" : {
                         "type" : "constant",
                         "value" : true
-                      },
-                      "allowHTML" : {
-                        "type" : "constant",
-                        "value" : true
-                      },
-                      "striped" : {
-                        "type" : "constant",
-                        "value" : true
                       }
                     },
-                    "reference" : "ce817637-ae33-4fac-abba-37136d2c9f88",
+                    "reference" : "dcc5e95c-0ce8-4d21-9215-3a7b28830645",
                     "hasValidationError" : false,
                     "id" : "pbTable",
                     "description" : ""
@@ -259,12 +238,11 @@
                     },
                     "propertyValues" : {
                       "repeatedCollection" : {
-                        "type" : "variable",
-                        "value" : ""
+                        "type" : "variable"
                       },
                       "hidden" : {
                         "type" : "expression",
-                        "value" : "!userDirectory_selected"
+                        "value" : "!country_selected"
                       },
                       "cssClasses" : {
                         "type" : "constant",
@@ -275,7 +253,7 @@
                         "value" : 1
                       }
                     },
-                    "reference" : "b6c4824e-be77-4818-a880-33ea5d1f0ef4",
+                    "reference" : "31dfebc9-4307-4b3d-8405-84118b66997d",
                     "hasValidationError" : false,
                     "id" : "pbContainer",
                     "rows" : [
@@ -292,12 +270,11 @@
                     },
                     "propertyValues" : {
                       "repeatedCollection" : {
-                        "type" : "variable",
-                        "value" : ""
+                        "type" : "variable"
                       },
                       "hidden" : {
                         "type" : "expression",
-                        "value" : "!userDirectory_selected"
+                        "value" : "!country_selected"
                       },
                       "cssClasses" : {
                         "type" : "constant",
@@ -308,10 +285,10 @@
                         "value" : 11
                       }
                     },
-                    "reference" : "5e82bba7-def6-47f8-95cf-93b664277eb9",
+                    "reference" : "46149c6a-787c-47ec-a9a8-edf898a7cff0",
                     "hasValidationError" : false,
                     "id" : "pbContainer",
-                    "description" : "Display \"UserDirectory\" details when a line is selected in the table above",
+                    "description" : "Display \"Country\" details when a line is selected in the table above",
                     "rows" : [
                       [
                         {
@@ -329,7 +306,7 @@
                             },
                             "hidden" : {
                               "type" : "expression",
-                              "value" : "!userDirectory_selected.name"
+                              "value" : "!country_selected.name"
                             },
                             "labelPosition" : {
                               "type" : "constant",
@@ -364,32 +341,14 @@
                             },
                             "value" : {
                               "type" : "variable",
-                              "value" : "userDirectory_selected.name"
+                              "value" : "country_selected.name"
                             },
                             "required" : {
                               "type" : "constant",
                               "value" : true
-                            },
-                            "minLength" : {
-                              "type" : "constant",
-                              "value" : ""
-                            },
-                            "maxLength" : {
-                              "type" : "constant",
-                              "value" : ""
-                            },
-                            "min" : {
-                              "type" : "constant"
-                            },
-                            "max" : {
-                              "type" : "constant"
-                            },
-                            "step" : {
-                              "type" : "constant",
-                              "value" : 1
                             }
                           },
-                          "reference" : "7d73bf2c-ae8e-45dd-a7aa-74dc9e22ffc6",
+                          "reference" : "45286f3e-059a-40fe-9314-a3efb088d097",
                           "hasValidationError" : false,
                           "id" : "pbInput",
                           "description" : ""
@@ -411,7 +370,7 @@
                             },
                             "hidden" : {
                               "type" : "expression",
-                              "value" : "!userDirectory_selected.description"
+                              "value" : "!country_selected.code"
                             },
                             "labelPosition" : {
                               "type" : "constant",
@@ -431,7 +390,7 @@
                             },
                             "label" : {
                               "type" : "interpolation",
-                              "value" : "Description"
+                              "value" : "Code"
                             },
                             "placeholder" : {
                               "type" : "constant"
@@ -446,181 +405,17 @@
                             },
                             "value" : {
                               "type" : "variable",
-                              "value" : "userDirectory_selected.description"
+                              "value" : "country_selected.code"
                             },
                             "required" : {
                               "type" : "constant",
-                              "value" : false
-                            },
-                            "minLength" : {
-                              "type" : "constant",
-                              "value" : ""
-                            },
-                            "maxLength" : {
-                              "type" : "constant",
-                              "value" : ""
-                            },
-                            "min" : {
-                              "type" : "constant"
-                            },
-                            "max" : {
-                              "type" : "constant"
-                            },
-                            "step" : {
-                              "type" : "constant",
-                              "value" : 1
+                              "value" : true
                             }
                           },
-                          "reference" : "093d96ed-658b-41b4-9042-0285e5c9f4ac",
+                          "reference" : "e576a1f2-cba0-4efe-abb8-8f4d82669a87",
                           "hasValidationError" : false,
                           "id" : "pbInput",
                           "description" : ""
-                        }
-                      ],
-                      [
-                        {
-                          "type" : "container",
-                          "dimension" : {
-                            "xs" : 12
-                          },
-                          "propertyValues" : {
-                            "cssClasses" : {
-                              "type" : "constant",
-                              "value" : ""
-                            },
-                            "hidden" : {
-                              "type" : "constant",
-                              "value" : false
-                            },
-                            "repeatedCollection" : {
-                              "type" : "variable",
-                              "value" : ""
-                            }
-                          },
-                          "reference" : "829558ad-9238-41b6-8dd7-1681351e6c5b",
-                          "hasValidationError" : false,
-                          "id" : "pbContainer",
-                          "description" : "\"com.company.model.People\" object from \"userDirectory_peoples_selected.peoples\" variable",
-                          "rows" : [
-                            [
-                              {
-                                "type" : "component",
-                                "dimension" : {
-                                  "md" : 12,
-                                  "sm" : 12,
-                                  "xs" : 12,
-                                  "lg" : 12
-                                },
-                                "propertyValues" : {
-                                  "hidden" : {
-                                    "type" : "constant",
-                                    "value" : false
-                                  },
-                                  "level" : {
-                                    "type" : "constant",
-                                    "value" : "Level 4"
-                                  },
-                                  "cssClasses" : {
-                                    "type" : "constant",
-                                    "value" : ""
-                                  },
-                                  "text" : {
-                                    "type" : "interpolation",
-                                    "value" : "People"
-                                  },
-                                  "alignment" : {
-                                    "type" : "constant",
-                                    "value" : "left"
-                                  },
-                                  "dimension" : {
-                                    "type" : "constant",
-                                    "value" : 12
-                                  }
-                                },
-                                "reference" : "2afe49dd-57d5-4a96-b6cb-9b0a6582478b",
-                                "hasValidationError" : false,
-                                "id" : "pbTitle",
-                                "description" : ""
-                              }
-                            ],
-                            [
-                              {
-                                "type" : "component",
-                                "dimension" : {
-                                  "md" : 12,
-                                  "sm" : 12,
-                                  "xs" : 12,
-                                  "lg" : 12
-                                },
-                                "propertyValues" : {
-                                  "headers" : {
-                                    "type" : "constant",
-                                    "value" : [
-                                      "First Name",
-                                      "Last Name",
-                                      "Birth Date"
-                                    ]
-                                  },
-                                  "allowHtml" : {
-                                    "type" : "constant",
-                                    "value" : true
-                                  },
-                                  "hidden" : {
-                                    "type" : "constant",
-                                    "value" : false
-                                  },
-                                  "cssClasses" : {
-                                    "type" : "constant",
-                                    "value" : ""
-                                  },
-                                  "condensed" : {
-                                    "type" : "constant",
-                                    "value" : false
-                                  },
-                                  "bordered" : {
-                                    "type" : "constant",
-                                    "value" : false
-                                  },
-                                  "selectedRow" : {
-                                    "type" : "variable",
-                                    "value" : "userDirectory_peoples_selected"
-                                  },
-                                  "columnsKey" : {
-                                    "type" : "constant",
-                                    "value" : [
-                                      "firstName",
-                                      "lastName",
-                                      "birthDate"
-                                    ]
-                                  },
-                                  "dimension" : {
-                                    "type" : "constant",
-                                    "value" : 12
-                                  },
-                                  "content" : {
-                                    "type" : "expression",
-                                    "value" : "userDirectory_selected.peoples"
-                                  },
-                                  "zebraStriping" : {
-                                    "type" : "constant",
-                                    "value" : true
-                                  },
-                                  "allowHTML" : {
-                                    "type" : "constant",
-                                    "value" : true
-                                  },
-                                  "striped" : {
-                                    "type" : "constant",
-                                    "value" : true
-                                  }
-                                },
-                                "reference" : "a0379e5a-25a7-40b7-b1ba-0f05b80e16a9",
-                                "hasValidationError" : false,
-                                "id" : "pbTable",
-                                "description" : ""
-                              }
-                            ]
-                          ]
                         }
                       ],
                       [
@@ -711,7 +506,7 @@
                               "type" : "variable"
                             }
                           },
-                          "reference" : "cc0ad1b0-7cca-4d95-8224-ebc216241ad2",
+                          "reference" : "a2db1e07-70d4-495f-90fa-047fd8952ecd",
                           "hasValidationError" : false,
                           "id" : "pbButton"
                         },
@@ -780,7 +575,7 @@
                               "value" : "primary"
                             }
                           },
-                          "reference" : "d8ffa474-b4d2-451c-a454-8f92df9a43a5",
+                          "reference" : "1832d3b0-0ee5-45a8-9049-781b1e1c8046",
                           "hasValidationError" : false,
                           "id" : "pbLink"
                         }
@@ -813,34 +608,6 @@
   ],
   "inactiveAssets" : [ ],
   "variables" : {
-    "userDirectory" : {
-      "type" : "businessdata",
-      "value" : [
-        "{\"displayValue\":\"find [com.company.model.UserDirectory]\",\"businessObjectName\":\"UserDirectory\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"com.company.model.UserDirectory\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"10\"}}"
-      ],
-      "exposed" : false
-    },
-    "userDirectory_selected" : {
-      "type" : "constant",
-      "value" : [
-        ""
-      ],
-      "exposed" : false
-    },
-    "userDirectory_peoples_selected" : {
-      "type" : "constant",
-      "value" : [
-        ""
-      ],
-      "exposed" : false
-    },
-    "userDirectory_peoples" : {
-      "type" : "url",
-      "value" : [
-        "{{userDirectory_peoples_selected|lazyRef:'address'}}"
-      ],
-      "exposed" : false
-    },
     "searchProcess" : {
       "type" : "url",
       "value" : [
@@ -905,6 +672,19 @@
       ],
       "exposed" : false
     },
+    "additionalUrlParams" : {
+      "type" : "expression",
+      "value" : [
+        "const params = {",
+        "   origin : window.top.location.href",
+        "}",
+        "if($data.country_selected){",
+        "    params.entity = $data.country_selected.persistenceId_string",
+        "}",
+        "return params;"
+      ],
+      "exposed" : false
+    },
     "searchDeleteTaskInstance" : {
       "type" : "url",
       "value" : [
@@ -925,34 +705,35 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "    persistenceId_string : $data.userDirectory_selected.persistenceId_string",
+        "    persistenceId_string : $data.country_selected.persistenceId_string",
         "}"
       ],
       "exposed" : false
     },
-    "additionalUrlParams" : {
-      "type" : "expression",
+    "country" : {
+      "type" : "businessdata",
       "value" : [
-        "const params = {",
-        "   origin : window.top.location.href",
-        "}",
-        "if($data.userDirectory_selected){",
-        "    params.entity = $data.userDirectory_selected.persistenceId_string",
-        "}",
-        "return params;"
+        "{\"displayValue\":\"find [com.company.model.Country]\",\"businessObjectName\":\"Country\",\"query\":{\"name\":\"find\",\"displayName\":\"find\"},\"id\":\"com.company.model.Country\",\"filters\":[],\"pagination\":{\"p\":\"0\",\"c\":\"200\"}}"
+      ],
+      "exposed" : false
+    },
+    "country_selected" : {
+      "type" : "constant",
+      "value" : [
+        ""
       ],
       "exposed" : false
     },
     "writerProcessName" : {
       "type" : "constant",
       "value" : [
-        "UserDirectoryWriter"
+        "CountryWriter"
       ],
       "exposed" : false
     }
   },
   "hasValidationError" : false,
-  "uuid" : "aa24a3b1-c06a-41ea-92a0-5c87970334d6",
+  "uuid" : "ae761dc2-95df-40c5-a366-28c75e191b26",
   "type" : "page",
   "description" : "Page generated with Bonita UI designer"
 }

@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "PeoplePage",
   "name" : "PeoplePage",
-  "lastUpdate" : 1602162863787,
+  "lastUpdate" : 1602166323324,
   "rows" : [
     [
       {
@@ -1206,7 +1206,7 @@
                             },
                             "targetUrlOnSuccess" : {
                               "type" : "interpolation",
-                              "value" : ".."
+                              "value" : "{{ window.top.location.href }}"
                             },
                             "collectionToModify" : {
                               "type" : "variable"
@@ -1331,7 +1331,7 @@
     "searchProcess" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/process?p=0&c=1&f=name=PeopleWriter&f=activationState=ENABLED&o=version%20DESC"
+        "../API/bpm/process?p=0&c=1&f=name={{writerProcessName}}&f=activationState=ENABLED&o=version%20DESC"
       ],
       "exposed" : false
     },
@@ -1398,7 +1398,7 @@
         "const params = {",
         "   origin : window.top.location.href",
         "}",
-        "if($data.userDirectory_selected){",
+        "if($data.people_selected){",
         "    params.entity = $data.people_selected.persistenceId_string",
         "}",
         "return params;"
@@ -1448,6 +1448,13 @@
       "type" : "constant",
       "value" : [
         ""
+      ],
+      "exposed" : false
+    },
+    "writerProcessName" : {
+      "type" : "constant",
+      "value" : [
+        "PeopleWriter"
       ],
       "exposed" : false
     }

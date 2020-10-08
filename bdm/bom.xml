@@ -30,7 +30,7 @@
                 </field>
                 <field type="STRING" length="255" name="lastName" nullable="false" collection="false"/>
                 <field type="LOCALDATE" length="255" name="birthDate" nullable="false" collection="false"/>
-                <relationField type="AGGREGATION" reference="com.company.model.Address" fetchType="LAZY" name="address" nullable="true" collection="true"/>
+                <relationField type="COMPOSITION" reference="com.company.model.Address" fetchType="LAZY" name="address" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
@@ -38,6 +38,8 @@
         </businessObject>
         <businessObject qualifiedName="com.company.model.UserDirectory">
             <fields>
+                <field type="STRING" length="255" name="name" nullable="false" collection="false"/>
+                <field type="TEXT" length="255" name="description" nullable="true" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.company.model.People" fetchType="EAGER" name="peoples" nullable="true" collection="true"/>
             </fields>
             <uniqueConstraints/>

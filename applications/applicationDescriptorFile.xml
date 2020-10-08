@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="data" version="1.0" profile="User" homePage="user-directory" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_bootstrapdefaulttheme">
+        <displayName>Data Management App</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_UserDirectoryPage" token="user-directory"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="user-directory">
+                <displayName>User Directory</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

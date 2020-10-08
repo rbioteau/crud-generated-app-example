@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "UpdateUserDirectoryForm",
   "name" : "UpdateUserDirectoryForm",
-  "lastUpdate" : 1602150455576,
+  "lastUpdate" : 1602163567715,
   "rows" : [
     [
       {
@@ -452,6 +452,17 @@
                               "required" : {
                                 "type" : "constant",
                                 "value" : true
+                              },
+                              "disabled" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "displayedKey" : {
+                                "type" : "constant",
+                                "value" : "firstName + ' ' + lastName"
+                              },
+                              "returnedKey" : {
+                                "type" : "constant"
                               }
                             },
                             "reference" : "c886efc8-6448-4dc7-8659-e507d5510a6d",
@@ -806,7 +817,7 @@
                   },
                   "targetUrlOnSuccess" : {
                     "type" : "interpolation",
-                    "value" : "/bonita"
+                    "value" : "{{ origin }}"
                   },
                   "action" : {
                     "type" : "constant",
@@ -1024,6 +1035,13 @@
         "if($data.searchUserDirectory && $data.searchUserDirectory.length > 0){",
         "    return  $data.searchUserDirectory[0];",
         "}"
+      ],
+      "exposed" : false
+    },
+    "origin" : {
+      "type" : "urlparameter",
+      "value" : [
+        "origin"
       ],
       "exposed" : false
     }

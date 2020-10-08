@@ -4,10 +4,14 @@
         <displayName>Data Management App</displayName>
         <applicationPages>
             <applicationPage customPage="custompage_UserDirectoryPage" token="user-directory"/>
+            <applicationPage customPage="custompage_PeoplePage" token="people"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu applicationPage="user-directory">
                 <displayName>User Directory</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="people">
+                <displayName>People</displayName>
             </applicationMenu>
         </applicationMenus>
     </application>

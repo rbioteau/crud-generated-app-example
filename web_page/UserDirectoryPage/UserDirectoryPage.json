@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "UserDirectoryPage",
   "name" : "UserDirectoryPage",
-  "lastUpdate" : 1602153156527,
+  "lastUpdate" : 1602163041062,
   "rows" : [
     [
       {
@@ -36,178 +36,6 @@
         "id" : "pbContainer",
         "description" : "Auto generate ui for business object \"com.company.model.UserDirectory\"",
         "rows" : [
-          [
-            {
-              "type" : "container",
-              "dimension" : {
-                "xs" : 12,
-                "sm" : 12,
-                "md" : 12,
-                "lg" : 12
-              },
-              "propertyValues" : {
-                "cssClasses" : {
-                  "type" : "constant",
-                  "value" : "alert alert-warning"
-                },
-                "hidden" : {
-                  "type" : "expression",
-                  "value" : "searchProcessInstance && searchProcessInstance.length > 0"
-                },
-                "repeatedCollection" : {
-                  "type" : "variable",
-                  "value" : ""
-                }
-              },
-              "reference" : "f40b207f-b190-4608-9c94-5aa75334bea5",
-              "hasValidationError" : false,
-              "id" : "pbContainer",
-              "rows" : [
-                [
-                  {
-                    "type" : "component",
-                    "dimension" : {
-                      "xs" : 12,
-                      "sm" : 12,
-                      "md" : 10,
-                      "lg" : 6
-                    },
-                    "propertyValues" : {
-                      "cssClasses" : {
-                        "type" : "constant",
-                        "value" : ""
-                      },
-                      "hidden" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "labelHidden" : {
-                        "type" : "constant",
-                        "value" : true
-                      },
-                      "label" : {
-                        "type" : "interpolation",
-                        "value" : "Default label"
-                      },
-                      "labelPosition" : {
-                        "type" : "constant",
-                        "value" : "top"
-                      },
-                      "labelWidth" : {
-                        "type" : "constant",
-                        "value" : 4
-                      },
-                      "allowHTML" : {
-                        "type" : "constant",
-                        "value" : true
-                      },
-                      "text" : {
-                        "type" : "interpolation",
-                        "value" : "<strong><span class=\"glyphicon glyphicon-warning-sign\"></span></strong> User directory write process is not running, please start an instance to enable creation and edition."
-                      },
-                      "alignment" : {
-                        "type" : "constant",
-                        "value" : "left"
-                      }
-                    },
-                    "reference" : "c0cbbdb8-cfd6-46aa-89be-3b04f54400e0",
-                    "hasValidationError" : false,
-                    "id" : "pbText"
-                  },
-                  {
-                    "type" : "component",
-                    "dimension" : {
-                      "xs" : 12,
-                      "sm" : 12,
-                      "md" : 2,
-                      "lg" : 6
-                    },
-                    "propertyValues" : {
-                      "cssClasses" : {
-                        "type" : "constant",
-                        "value" : ""
-                      },
-                      "hidden" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "disabled" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "label" : {
-                        "type" : "interpolation",
-                        "value" : "Start it !"
-                      },
-                      "alignment" : {
-                        "type" : "constant",
-                        "value" : "right"
-                      },
-                      "buttonStyle" : {
-                        "type" : "constant",
-                        "value" : "warning"
-                      },
-                      "action" : {
-                        "type" : "constant",
-                        "value" : "POST"
-                      },
-                      "assign" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "url" : {
-                        "type" : "interpolation",
-                        "value" : "../API/bpm/process/{{userDirectoryWriterProcessDefinition.id}}/instantiation"
-                      },
-                      "responseStatusCode" : {
-                        "type" : "variable",
-                        "value" : ""
-                      },
-                      "dataToSend" : {
-                        "type" : "constant"
-                      },
-                      "dataFromSuccess" : {
-                        "type" : "variable",
-                        "value" : ""
-                      },
-                      "closeOnSuccess" : {
-                        "type" : "constant",
-                        "value" : false
-                      },
-                      "dataFromError" : {
-                        "type" : "variable",
-                        "value" : ""
-                      },
-                      "targetUrlOnSuccess" : {
-                        "type" : "interpolation",
-                        "value" : ".."
-                      },
-                      "collectionToModify" : {
-                        "type" : "variable"
-                      },
-                      "modalId" : {
-                        "type" : "constant",
-                        "value" : ""
-                      },
-                      "collectionPosition" : {
-                        "type" : "constant",
-                        "value" : "Last"
-                      },
-                      "valueToAdd" : {
-                        "type" : "constant"
-                      },
-                      "removeItem" : {
-                        "type" : "variable"
-                      }
-                    },
-                    "reference" : "98b9472c-c35b-4420-af1c-33f86c6e1b8f",
-                    "hasValidationError" : false,
-                    "id" : "pbButton"
-                  }
-                ]
-              ]
-            }
-          ],
           [
             {
               "type" : "container",
@@ -290,7 +118,7 @@
                       },
                       "hidden" : {
                         "type" : "expression",
-                        "value" : "!createUserDirectoryTaskInstance"
+                        "value" : "!createTaskInstance"
                       },
                       "text" : {
                         "type" : "interpolation",
@@ -315,7 +143,7 @@
                       },
                       "taskId" : {
                         "type" : "expression",
-                        "value" : "createUserDirectoryTaskInstance.id"
+                        "value" : "createTaskInstance.id"
                       },
                       "caseId" : {
                         "type" : "constant"
@@ -328,8 +156,8 @@
                         "type" : "constant"
                       },
                       "urlParams" : {
-                        "type" : "constant",
-                        "value" : ""
+                        "type" : "expression",
+                        "value" : "additionalUrlParams"
                       },
                       "alignment" : {
                         "type" : "constant",
@@ -811,7 +639,7 @@
                             },
                             "hidden" : {
                               "type" : "expression",
-                              "value" : "!deleteUserDirectoryTaskInstance"
+                              "value" : "!deleteTaskInstance"
                             },
                             "disabled" : {
                               "type" : "constant",
@@ -839,7 +667,7 @@
                             },
                             "url" : {
                               "type" : "interpolation",
-                              "value" : "../API/bpm/userTask/{{deleteUserDirectoryTaskInstance.id}}/execution?assign=true"
+                              "value" : "../API/bpm/userTask/{{deleteTaskInstance.id}}/execution?assign=true"
                             },
                             "responseStatusCode" : {
                               "type" : "variable",
@@ -902,7 +730,7 @@
                             },
                             "hidden" : {
                               "type" : "expression",
-                              "value" : "!updateUserDirectoryTaskInstance"
+                              "value" : "!updateTaskInstance"
                             },
                             "text" : {
                               "type" : "interpolation",
@@ -927,7 +755,7 @@
                             },
                             "taskId" : {
                               "type" : "expression",
-                              "value" : "updateUserDirectoryTaskInstance.id"
+                              "value" : "updateTaskInstance.id"
                             },
                             "caseId" : {
                               "type" : "constant"
@@ -941,7 +769,7 @@
                             },
                             "urlParams" : {
                               "type" : "expression",
-                              "value" : "updateUrlParams"
+                              "value" : "additionalUrlParams"
                             },
                             "alignment" : {
                               "type" : "constant",
@@ -1020,7 +848,7 @@
       ],
       "exposed" : false
     },
-    "userDirectoryWriterProcessDefinition" : {
+    "processDefinition" : {
       "type" : "expression",
       "value" : [
         "if($data.searchProcess && $data.searchProcess.length > 0){",
@@ -1032,11 +860,11 @@
     "searchProcessInstance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/case?p=0&c=1&f=processDefinitionId={{userDirectoryWriterProcessDefinition.id}}"
+        "../API/bpm/case?p=0&c=1&f=processDefinitionId={{processDefinition.id}}"
       ],
       "exposed" : false
     },
-    "userDirectoryWriterProcessInstance" : {
+    "processInstance" : {
       "type" : "expression",
       "value" : [
         "if($data.searchProcessInstance &&  $data.searchProcessInstance.length > 0){",
@@ -1045,59 +873,63 @@
       ],
       "exposed" : false
     },
-    "searchCreateUserDirectoryTaskInstance" : {
+    "searchCreateTaskInstance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/humanTask?p=0&c=1&f=processInstanceId={{userDirectoryWriterProcessInstance.id}}&f=name=Create UserDirectory"
+        "../API/bpm/humanTask?p=0&c=1&f=caseId={{processInstance.id}}&f=name=Create"
       ],
       "exposed" : false
     },
-    "createUserDirectoryTaskInstance" : {
+    "createTaskInstance" : {
       "type" : "expression",
       "value" : [
-        "if($data.searchCreateUserDirectoryTaskInstance && $data.searchCreateUserDirectoryTaskInstance.length > 0){",
-        "    return $data.searchCreateUserDirectoryTaskInstance[0]",
+        "if($data.searchCreateTaskInstance && $data.searchCreateTaskInstance.length > 0){",
+        "    return $data.searchCreateTaskInstance[0]",
         "}"
       ],
       "exposed" : false
     },
-    "searchUpdateUserDirectoryTaskInstance" : {
+    "searchUpdateTaskInstance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/humanTask?p=0&c=1&f=processInstanceId={{userDirectoryWriterProcessInstance.id}}&f=name=Update UserDirectory"
+        "../API/bpm/humanTask?p=0&c=1&f=caseId={{processInstance.id}}&f=name=Update"
       ],
       "exposed" : false
     },
-    "updateUserDirectoryTaskInstance" : {
+    "updateTaskInstance" : {
       "type" : "expression",
       "value" : [
-        "if($data.searchUpdateUserDirectoryTaskInstance && $data.searchUpdateUserDirectoryTaskInstance.length > 0){",
-        "    return $data.searchUpdateUserDirectoryTaskInstance[0];",
+        "if($data.searchUpdateTaskInstance && $data.searchUpdateTaskInstance.length > 0){",
+        "    return $data.searchUpdateTaskInstance[0];",
         "}"
       ],
       "exposed" : false
     },
-    "updateUrlParams" : {
+    "additionalUrlParams" : {
       "type" : "expression",
       "value" : [
-        "return {",
-        "   entity : $data.userDirectory_selected.persistenceId_string   ",
-        "}"
+        "const params = {",
+        "   origin : window.top.location.href",
+        "}",
+        "if($data.userDirectory_selected){",
+        "    params.entity = $data.userDirectory_selected.persistenceId_string",
+        "}",
+        "return params;"
       ],
       "exposed" : false
     },
-    "searchDeleteUserDirectoryTaskInstance" : {
+    "searchDeleteTaskInstance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/humanTask?p=0&c=1&f=processInstanceId={{userDirectoryWriterProcessInstance.id}}&f=name=Delete UserDirectory"
+        "../API/bpm/humanTask?p=0&c=1&f=caseId={{processInstance.id}}&f=name=Delete"
       ],
       "exposed" : false
     },
-    "deleteUserDirectoryTaskInstance" : {
+    "deleteTaskInstance" : {
       "type" : "expression",
       "value" : [
-        "if($data.searchDeleteUserDirectoryTaskInstance && $data.searchDeleteUserDirectoryTaskInstance.length > 0){",
-        "    return $data.searchDeleteUserDirectoryTaskInstance[0];",
+        "if($data.searchDeleteTaskInstance && $data.searchDeleteTaskInstance.length > 0){",
+        "    return $data.searchDeleteTaskInstance[0];",
         "}"
       ],
       "exposed" : false

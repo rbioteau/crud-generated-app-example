@@ -1,8 +1,8 @@
 {
   "modelVersion" : "2.0",
-  "id" : "CreateUserDirectoryForm",
-  "name" : "CreateUserDirectoryForm",
-  "lastUpdate" : 1602163557815,
+  "id" : "CreatePeopleForm",
+  "name" : "CreatePeopleForm",
+  "lastUpdate" : 1602162454164,
   "rows" : [
     [
       {
@@ -11,7 +11,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "707f2813-92c6-4b7a-a076-ba1edad81572",
+        "reference" : "bb8c5d18-be6f-4b55-9a70-d8ac7a5ea9e5",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -50,7 +50,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "aa3ef0ae-597a-48e4-a66f-b2e38378ab5d",
+              "reference" : "a5c71b7b-d693-46a9-8afc-5367fa2b9f37",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -98,7 +98,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "c98b16cd-0dde-4259-b57e-4aea54e267af",
+              "reference" : "f1d444d3-a737-4dbe-b505-1c9934b66871",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -114,7 +114,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "8b44b5a8-e1ec-4b75-a85c-cfdd4a783d5c",
+        "reference" : "f7334f03-23b8-4f07-ab15-ebc3b2e59f53",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -123,7 +123,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "babab970-c0ab-4c12-9891-6ce753a0bfaf",
+          "reference" : "7f010ac4-870b-4e87-ad9a-e8b5f8345fa6",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -151,7 +151,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "User Directory"
+                    "value" : "People"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -162,7 +162,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "f9d6d3e9-d9d0-4c0a-a8b4-49866a8091b5",
+                "reference" : "744c4159-aeb2-45f5-bdb7-8a70d49d519c",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -194,7 +194,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "12815231-edae-41c8-9663-fc3095d6a6bf",
+                "reference" : "6ff64525-f568-44eb-b306-2c7811214669",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -234,7 +234,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Name"
+                          "value" : "First Name"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -249,14 +249,14 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.userDirectoryInput.name"
+                          "value" : "formInput.peopleInput.firstName"
                         },
                         "required" : {
                           "type" : "constant",
                           "value" : true
                         }
                       },
-                      "reference" : "ba63a55f-20e7-4831-a54a-03b98cda4c0e",
+                      "reference" : "7591ff8c-bdd8-4f6f-86e6-8904a3d544d8",
                       "hasValidationError" : false,
                       "id" : "pbInput",
                       "description" : ""
@@ -298,7 +298,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Description"
+                          "value" : "Last Name"
                         },
                         "placeholder" : {
                           "type" : "constant"
@@ -313,16 +313,92 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "formInput.userDirectoryInput.description"
+                          "value" : "formInput.peopleInput.lastName"
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : false
+                          "value" : true
                         }
                       },
-                      "reference" : "dc950315-2345-4fb8-8792-414acdc1161a",
+                      "reference" : "837f2a44-e99d-4bcb-922d-70898f220cb3",
                       "hasValidationError" : false,
                       "id" : "pbInput",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "dateFormat" : {
+                          "type" : "constant",
+                          "value" : "MM/dd/yyyy"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 1
+                        },
+                        "readOnly" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Birth Date"
+                        },
+                        "type" : {
+                          "type" : "constant"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "todayLabel" : {
+                          "type" : "constant",
+                          "value" : "Today"
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "showToday" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "placeholder" : {
+                          "type" : "constant",
+                          "value" : "Enter a date (mm/dd/yyyy)"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "formInput.peopleInput.birthDate"
+                        }
+                      },
+                      "reference" : "581bd09b-eefd-4f14-a2ec-4fc700220def",
+                      "hasValidationError" : false,
+                      "id" : "pbDatePicker",
                       "description" : ""
                     }
                   ],
@@ -350,7 +426,7 @@
                         },
                         "text" : {
                           "type" : "interpolation",
-                          "value" : "Peoples"
+                          "value" : "Address"
                         },
                         "alignment" : {
                           "type" : "constant",
@@ -361,7 +437,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "8c3dafe5-d6f9-4e31-90ce-421536f462d4",
+                      "reference" : "c4586965-a42a-4102-80c3-129200bcf90e",
                       "hasValidationError" : false,
                       "id" : "pbTitle",
                       "description" : ""
@@ -379,7 +455,7 @@
                       "propertyValues" : {
                         "repeatedCollection" : {
                           "type" : "variable",
-                          "value" : "formInput.userDirectoryInput.peoples"
+                          "value" : "formInput.peopleInput.address"
                         },
                         "hidden" : {
                           "type" : "constant",
@@ -394,7 +470,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "c944d6f5-4f4d-4f63-99b0-8f9684a092c3",
+                      "reference" : "1bec49fc-773b-4ad3-96c2-556d93be7cc9",
                       "hasValidationError" : false,
                       "id" : "pbContainer",
                       "rows" : [
@@ -424,21 +500,24 @@
                                 "type" : "constant",
                                 "value" : ""
                               },
-                              "availableValues" : {
-                                "type" : "expression",
-                                "value" : "people_query"
-                              },
                               "labelWidth" : {
                                 "type" : "constant",
                                 "value" : 1
                               },
+                              "readOnly" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
                               "label" : {
                                 "type" : "interpolation",
-                                "value" : "Peoples"
+                                "value" : "Street"
                               },
                               "placeholder" : {
+                                "type" : "constant"
+                              },
+                              "type" : {
                                 "type" : "constant",
-                                "value" : "Select a Peoples"
+                                "value" : "text"
                               },
                               "dimension" : {
                                 "type" : "constant",
@@ -446,7 +525,196 @@
                               },
                               "value" : {
                                 "type" : "variable",
-                                "value" : "$item"
+                                "value" : "$item.street"
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : true
+                              }
+                            },
+                            "reference" : "f877111d-8dd4-45a4-9886-02e8d3f00199",
+                            "hasValidationError" : false,
+                            "id" : "pbInput",
+                            "description" : ""
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "md" : 12,
+                              "sm" : 12,
+                              "xs" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 1
+                              },
+                              "readOnly" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Zipcode"
+                              },
+                              "placeholder" : {
+                                "type" : "constant"
+                              },
+                              "type" : {
+                                "type" : "constant",
+                                "value" : "text"
+                              },
+                              "dimension" : {
+                                "type" : "constant",
+                                "value" : 12
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "$item.zipcode"
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : true
+                              }
+                            },
+                            "reference" : "4c8b1eb8-5e94-45d7-a742-5f34a2bdd2c4",
+                            "hasValidationError" : false,
+                            "id" : "pbInput",
+                            "description" : ""
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "md" : 12,
+                              "sm" : 12,
+                              "xs" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 1
+                              },
+                              "readOnly" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "City"
+                              },
+                              "placeholder" : {
+                                "type" : "constant"
+                              },
+                              "type" : {
+                                "type" : "constant",
+                                "value" : "text"
+                              },
+                              "dimension" : {
+                                "type" : "constant",
+                                "value" : 12
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "$item.city"
+                              },
+                              "required" : {
+                                "type" : "constant",
+                                "value" : true
+                              }
+                            },
+                            "reference" : "b0ffd1e9-6d33-4d64-86c2-e7b1c47b8c01",
+                            "hasValidationError" : false,
+                            "id" : "pbInput",
+                            "description" : ""
+                          }
+                        ],
+                        [
+                          {
+                            "type" : "component",
+                            "dimension" : {
+                              "md" : 12,
+                              "sm" : 12,
+                              "xs" : 12,
+                              "lg" : 12
+                            },
+                            "propertyValues" : {
+                              "labelHidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "hidden" : {
+                                "type" : "constant",
+                                "value" : false
+                              },
+                              "labelPosition" : {
+                                "type" : "constant",
+                                "value" : "top"
+                              },
+                              "cssClasses" : {
+                                "type" : "constant",
+                                "value" : ""
+                              },
+                              "availableValues" : {
+                                "type" : "expression",
+                                "value" : "country_query"
+                              },
+                              "labelWidth" : {
+                                "type" : "constant",
+                                "value" : 1
+                              },
+                              "label" : {
+                                "type" : "interpolation",
+                                "value" : "Country"
+                              },
+                              "placeholder" : {
+                                "type" : "constant",
+                                "value" : "Select a Country"
+                              },
+                              "dimension" : {
+                                "type" : "constant",
+                                "value" : 12
+                              },
+                              "value" : {
+                                "type" : "variable",
+                                "value" : "$item.country"
                               },
                               "required" : {
                                 "type" : "constant",
@@ -458,13 +726,13 @@
                               },
                               "displayedKey" : {
                                 "type" : "constant",
-                                "value" : "firstName + ' ' + lastName"
+                                "value" : "name"
                               },
                               "returnedKey" : {
                                 "type" : "constant"
                               }
                             },
-                            "reference" : "6fecec70-95a3-4c3f-b043-ec58b7c1f467",
+                            "reference" : "6908f7b0-e373-4126-857e-87c12a3fda9b",
                             "hasValidationError" : false,
                             "id" : "pbSelect",
                             "description" : ""
@@ -538,7 +806,7 @@
                                 "value" : 12
                               }
                             },
-                            "reference" : "1044e969-1daf-44b8-8848-be3694314570",
+                            "reference" : "5cf47cf1-9fe0-4f91-942c-7ae8d275133a",
                             "hasValidationError" : false,
                             "id" : "pbButton",
                             "description" : ""
@@ -574,7 +842,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Add People"
+                          "value" : "<span class=\"glyphicon glyphicon-plus\"></span> Add Address"
                         },
                         "dataToSend" : {
                           "type" : "expression"
@@ -595,11 +863,11 @@
                         },
                         "collectionToModify" : {
                           "type" : "variable",
-                          "value" : "formInput.userDirectoryInput.peoples"
+                          "value" : "formInput.peopleInput.address"
                         },
                         "valueToAdd" : {
                           "type" : "expression",
-                          "value" : "{\n  \"persistenceId_string\" : \"\"\n}"
+                          "value" : "{\n  \"street\" : \"\",\n  \"zipcode\" : \"\",\n  \"city\" : \"\",\n  \"country\" : {\n    \"persistenceId_string\" : \"\"\n  }\n}"
                         },
                         "disabled" : {
                           "type" : "constant",
@@ -614,7 +882,7 @@
                           "value" : 12
                         }
                       },
-                      "reference" : "b92e23cc-dd40-4640-a937-a6250aa6cea9",
+                      "reference" : "5b278642-f111-40ff-a62d-0a3c690f95a1",
                       "hasValidationError" : false,
                       "id" : "pbButton",
                       "description" : ""
@@ -717,7 +985,7 @@
                     "value" : ""
                   }
                 },
-                "reference" : "6e959d58-a2e9-4879-8ab0-3885d345b99e",
+                "reference" : "c20c1308-bf1e-4948-92a2-75280fbb8f39",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -769,7 +1037,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "17021632-d97d-4ef2-bddd-59845c13fd1f",
+                "reference" : "df18da0d-b2f5-4437-97ac-f06832e3a567",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -782,14 +1050,14 @@
   ],
   "assets" : [
     {
-      "id" : "80c8fa98-bfa1-419c-b311-38245ee4ad1e",
+      "id" : "1110791f-ba07-41af-9282-9d2b332ab1b4",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "a122c5ff-5601-4755-9469-d780d58740b8",
+      "id" : "f43243a8-ac8f-4a0d-8952-b81670a35700",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
@@ -809,19 +1077,19 @@
       "type" : "json",
       "value" : [
         "{",
-        "  \"userDirectoryInput\" : {",
-        "    \"name\" : \"\",",
-        "    \"description\" : \"\",",
-        "    \"peoples\" : [ ]",
+        "  \"peopleInput\" : {",
+        "    \"firstName\" : \"\",",
+        "    \"lastName\" : \"\",",
+        "    \"address\" : [ ]",
         "  }",
         "}"
       ],
       "exposed" : false
     },
-    "people_query" : {
+    "country_query" : {
       "type" : "url",
       "value" : [
-        "../API/bdm/businessData/com.company.model.People?q=find&p=0&c=99"
+        "../API/bdm/businessData/com.company.model.Country?q=find&p=0&c=99"
       ],
       "exposed" : false
     },
@@ -844,7 +1112,7 @@
       "type" : "expression",
       "value" : [
         "return {",
-        "\tuserDirectoryInput: $data.formInput.userDirectoryInput",
+        "\tpeopleInput: $data.formInput.peopleInput",
         "}"
       ],
       "exposed" : false
@@ -872,7 +1140,7 @@
     }
   },
   "hasValidationError" : false,
-  "uuid" : "bb9cbb93-b076-4295-a1ce-f7b952d24678",
+  "uuid" : "f36494cb-14d7-45c8-8909-abbf9c05aa16",
   "type" : "form",
   "description" : "Page generated with Bonita UI designer"
 }

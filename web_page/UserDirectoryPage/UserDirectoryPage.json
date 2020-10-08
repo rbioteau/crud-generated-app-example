@@ -2,7 +2,7 @@
   "modelVersion" : "2.0",
   "id" : "UserDirectoryPage",
   "name" : "UserDirectoryPage",
-  "lastUpdate" : 1602173632542,
+  "lastUpdate" : 1602174682040,
   "rows" : [
     [
       {
@@ -118,7 +118,7 @@
                       },
                       "hidden" : {
                         "type" : "expression",
-                        "value" : "!createTaskInstance"
+                        "value" : "!pageController.createTaskInstance"
                       },
                       "text" : {
                         "type" : "interpolation",
@@ -143,7 +143,7 @@
                       },
                       "taskId" : {
                         "type" : "expression",
-                        "value" : "createTaskInstance.id"
+                        "value" : "pageController.createTaskInstance.id"
                       },
                       "caseId" : {
                         "type" : "constant"
@@ -157,7 +157,7 @@
                       },
                       "urlParams" : {
                         "type" : "expression",
-                        "value" : "additionalUrlParams"
+                        "value" : "pageController.additionalUrlParams"
                       },
                       "alignment" : {
                         "type" : "constant",
@@ -639,7 +639,7 @@
                             },
                             "hidden" : {
                               "type" : "expression",
-                              "value" : "!deleteTaskInstance"
+                              "value" : "!pageController.deleteTaskInstance"
                             },
                             "disabled" : {
                               "type" : "constant",
@@ -667,7 +667,7 @@
                             },
                             "url" : {
                               "type" : "interpolation",
-                              "value" : "../API/bpm/userTask/{{deleteTaskInstance.id}}/execution?assign=true"
+                              "value" : "../API/bpm/userTask/{{pageController.deleteTaskInstance.id}}/execution?assign=true"
                             },
                             "responseStatusCode" : {
                               "type" : "variable",
@@ -675,7 +675,7 @@
                             },
                             "dataToSend" : {
                               "type" : "expression",
-                              "value" : "deletePayload"
+                              "value" : "pageController.deletePayload"
                             },
                             "dataFromSuccess" : {
                               "type" : "variable",
@@ -730,7 +730,7 @@
                             },
                             "hidden" : {
                               "type" : "expression",
-                              "value" : "!updateTaskInstance"
+                              "value" : "!pageController.updateTaskInstance"
                             },
                             "text" : {
                               "type" : "interpolation",
@@ -755,7 +755,7 @@
                             },
                             "taskId" : {
                               "type" : "expression",
-                              "value" : "updateTaskInstance.id"
+                              "value" : "pageController.updateTaskInstance.id"
                             },
                             "caseId" : {
                               "type" : "constant"
@@ -769,7 +769,7 @@
                             },
                             "urlParams" : {
                               "type" : "expression",
-                              "value" : "additionalUrlParams"
+                              "value" : "pageController.additionalUrlParams"
                             },
                             "alignment" : {
                               "type" : "constant",
@@ -844,109 +844,56 @@
     "searchProcess" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/process?p=0&c=1&f=name={{writerProcessName}}&f=activationState=ENABLED&o=version%20DESC"
-      ],
-      "exposed" : false
-    },
-    "processDefinition" : {
-      "type" : "expression",
-      "value" : [
-        "if($data.searchProcess && $data.searchProcess.length > 0){",
-        "    return $data.searchProcess[0];",
-        "}"
+        "../API/bpm/process?p=0&c=1&f=name={{pageController.processName}}&f=activationState=ENABLED&o=version%20DESC"
       ],
       "exposed" : false
     },
     "searchProcessInstance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/case?p=0&c=1&f=processDefinitionId={{processDefinition.id}}"
-      ],
-      "exposed" : false
-    },
-    "processInstance" : {
-      "type" : "expression",
-      "value" : [
-        "if($data.searchProcessInstance &&  $data.searchProcessInstance.length > 0){",
-        "    return $data.searchProcessInstance[0];",
-        "}"
+        "../API/bpm/case?p=0&c=1&f=processDefinitionId={{pageController.processDefinition.id}}"
       ],
       "exposed" : false
     },
     "searchCreateTaskInstance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/humanTask?p=0&c=1&f=caseId={{processInstance.id}}&f=name=Create"
-      ],
-      "exposed" : false
-    },
-    "createTaskInstance" : {
-      "type" : "expression",
-      "value" : [
-        "if($data.searchCreateTaskInstance && $data.searchCreateTaskInstance.length > 0){",
-        "    return $data.searchCreateTaskInstance[0]",
-        "}"
+        "../API/bpm/humanTask?p=0&c=1&f=caseId={{pageController.processInstance.id}}&f=name=Create"
       ],
       "exposed" : false
     },
     "searchUpdateTaskInstance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/humanTask?p=0&c=1&f=caseId={{processInstance.id}}&f=name=Update"
-      ],
-      "exposed" : false
-    },
-    "updateTaskInstance" : {
-      "type" : "expression",
-      "value" : [
-        "if($data.searchUpdateTaskInstance && $data.searchUpdateTaskInstance.length > 0){",
-        "    return $data.searchUpdateTaskInstance[0];",
-        "}"
+        "../API/bpm/humanTask?p=0&c=1&f=caseId={{pageController.processInstance.id}}&f=name=Update"
       ],
       "exposed" : false
     },
     "searchDeleteTaskInstance" : {
       "type" : "url",
       "value" : [
-        "../API/bpm/humanTask?p=0&c=1&f=caseId={{processInstance.id}}&f=name=Delete"
+        "../API/bpm/humanTask?p=0&c=1&f=caseId={{pageController.processInstance.id}}&f=name=Delete"
       ],
       "exposed" : false
     },
-    "deleteTaskInstance" : {
-      "type" : "expression",
-      "value" : [
-        "if($data.searchDeleteTaskInstance && $data.searchDeleteTaskInstance.length > 0){",
-        "    return $data.searchDeleteTaskInstance[0];",
-        "}"
-      ],
-      "exposed" : false
-    },
-    "deletePayload" : {
+    "pageController" : {
       "type" : "expression",
       "value" : [
         "return {",
-        "    persistenceId_string : $data.userDirectory_selected.persistenceId_string",
+        "    processName: \"UserDirectoryWriter\",",
+        "    processDefinition: $data.searchProcess && $data.searchProcess.length > 0 ? $data.searchProcess[0] : undefined,",
+        "    processInstance: $data.searchProcessInstance && $data.searchProcessInstance.length > 0 ? $data.searchProcessInstance[0] : undefined,",
+        "    createTaskInstance: $data.searchCreateTaskInstance && $data.searchCreateTaskInstance.length > 0 ? $data.searchCreateTaskInstance[0] : undefined,",
+        "    updateTaskInstance: $data.searchUpdateTaskInstance && $data.searchUpdateTaskInstance.length > 0 ? $data.searchUpdateTaskInstance[0] : undefined,",
+        "    deleteTaskInstance: $data.searchDeleteTaskInstance && $data.searchDeleteTaskInstance.length > 0 ? $data.searchDeleteTaskInstance[0] : undefined,",
+        "    additionalUrlParams: {",
+        "        origin: window.top.location.href,",
+        "        entity: $data.userDirectory_selected ? $data.userDirectory_selected.persistenceId_string : undefined",
+        "    },",
+        "    deletePayload: {",
+        "        persistenceId_string : $data.userDirectory_selected ? $data.userDirectory_selected.persistenceId_string : undefined",
+        "    }",
         "}"
-      ],
-      "exposed" : false
-    },
-    "additionalUrlParams" : {
-      "type" : "expression",
-      "value" : [
-        "const params = {",
-        "   origin : window.top.location.href",
-        "}",
-        "if($data.userDirectory_selected){",
-        "    params.entity = $data.userDirectory_selected.persistenceId_string",
-        "}",
-        "return params;"
-      ],
-      "exposed" : false
-    },
-    "writerProcessName" : {
-      "type" : "constant",
-      "value" : [
-        "UserDirectoryWriter"
       ],
       "exposed" : false
     }
